@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+
+</head>
+<body>
+    <section>
+        <div id="monitor">
+            <img id="background">
+            <canvas id="grid"></canvas>
+            <div id="perspective_mask"></div>
+            <div id="marks"></div>
+        </div>
+        <div id="toolbar" class="active">
+            <div class="tools_block">
+                <input type="file" id="upload_file">
+            </div>
+            <div class="tools_block">
+                <p>Перспектива</p>
+                <div class="trans_block">
+                    <div class="trans_block_row">
+                        <button class="trans">Q</button>
+                        <button class="trans">W</button>
+                        <button class="trans">E</button>
+                    </div>
+                    <div class="trans_block_row">
+                        <button class="trans">[</button>
+                        <button class="trans">A</button>
+                        <button class="trans"></button>
+                        <button class="trans">D</button>
+                        <button class="trans">]</button>
+                    </div>
+                    <div class="trans_block_row">
+                        <button class="trans">Z</button>
+                        <button class="trans">X</button>
+                        <button class="trans">C</button>
+                    </div>
+                </div>
+                <input id="perspective_step" type="number" min="0" max="10" step="0.01" value="0.5" title="Шаг угла поворота">
+                <button id="set_perspective">Задать</button>
+                <button id="reset_perspective">Сбросить</button>
+            </div>
+            <div class="tools_block">
+                <p>Известный отрезок</p>
+                <div class="point defined_point">
+                    <span class="point">x1:</span><span class="point">y1:</span>
+                </div>
+                <div class="point defined_point">
+                    <span class="point">x2:</span><span class="point">y2:</span>
+                </div>
+                <input type="number" placeholder="Длина" id="defined_length">
+                <button id="set_origin_points">Задать</button>
+                <button id="reset_origin_points">Сбросить</button>
+            </div>
+            <div class="tools_block">
+                <p>Неизвестный отрезок</p>
+                <div class="point undefined_point">
+                    <span class="point">x1:</span><span class="point">y1:</span>
+                </div>
+                <div class="point undefined_point">
+                    <span class="point">x2:</span><span class="point">y2:</span>
+                </div>
+                <button id="set_undefined_points">Задать</button>
+                <button id="reset_undefined_points">Сбросить</button>
+            </div>
+            <div class="tools_block">
+                <p>Масштаб</p>
+                <input id="ch_scale" type="number" min="0" max="10" step="0.01" value="1">
+            </div>
+            <div class="tools_block">
+                <p>Результат</p>
+                <span id="result">Длина: </span>
+            </div>
+        </div>
+    </section>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/main.js"></script>
+    <!-- <script src="/static/resize_ui.js"></script> -->
+
+</body>
+</html>

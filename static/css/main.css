@@ -1,0 +1,186 @@
+@import url("/static/css/reset.css");
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+#toolbar {
+    position: fixed;
+    left: -300px;
+    /* height: 100%; */
+    height: 100vh;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    padding: 10px;
+    transition-duration: 0.3s;
+    z-index: 100000;
+    overflow: auto;
+}
+
+#toolbar.active {
+    left: 0px;
+    transition-duration: 0.3s;
+}
+
+button {
+    border: 1px solid #FFFFFF;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.3s;
+}
+
+button.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.3s;
+}
+
+input {
+    color: #FFFFFF;
+    width: 100%;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    border: 1px solid #FFFFFF;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.3s;    
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.3s;
+}
+
+input[type="text"] {
+    background: transparent;
+    color: #ffffff;
+    height: 40px;
+    border: 0px;
+    border-bottom: 1px solid #ffffff5d;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding: 0px;
+}
+
+input[type="number"] {
+    background: transparent;
+    color: #ffffff;
+    height: 40px;
+    border: 0px;
+    border-bottom: 1px solid #ffffff5d;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding: 0px;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.tools_block {
+    padding: 10px 0px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.tools_block p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+div.point {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+span.point {
+    width: 50%;
+}
+
+#monitor {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+
+
+#background {
+    /* width: 100%; */
+    /* height: 100%; */
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+
+#grid {
+    position: absolute;
+}
+
+#perspective_mask {
+    position: absolute;
+}
+
+#marks {
+    position: absolute;
+}
+
+.trans_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.trans_block .trans_block_row {
+    display: flex;
+    justify-content: center;
+}
+
+.trans_block .trans_block_row .trans {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.green {
+    background-color: limegreen;
+}
+
+.red {
+    background-color: red;
+}
+
+.purple {
+    background-color: magenta;
+}
+
+.yellow {
+    background-color: yellow;
+}
